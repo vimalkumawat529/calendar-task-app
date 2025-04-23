@@ -1,70 +1,78 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Task Scheduler with Drag and Drop Functionality**
 
-## Available Scripts
+## **Description**
 
-In the project directory, you can run:
+This is a simple web application that allows users to drag tasks from a task list and drop them onto a specific date in a calendar. The task will then be displayed on the selected date. This functionality is implemented using ReactJS and React-DnD for drag-and-drop capabilities. The app is designed to work locally without any backend calls.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Features**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Display a calendar with selectable dates.
+- Show a task list beside the calendar.
+- Enable drag-and-drop functionality to allow users to drag a task and drop it on a specific date in the calendar.
+- Once dropped, display the task on that date in the calendar.
+- Entire interaction is handled locally (no backend required).
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Technologies Used**
 
-### `npm run build`
+- **ReactJS**: JavaScript library for building user interfaces.
+- **React-DnD**: A drag-and-drop library for React.
+- **CSS**: Used for styling the components.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **Installation**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow the steps below to set up the project locally:
 
-### `npm run eject`
+### **Step 1**: Clone the repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone <repository-url>
+cd <project-directory>
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **Step 2**: Install Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Run the following command to install all required dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+### **Step 3**: Start the Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run the application locally, use the following command:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+This will start the application on [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## **How to Use**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Launch the Application**: Once the app is running, navigate to `http://localhost:3000` in your browser.
+2. **Interact with the App**: Drag and drop tasks from the task list into the calendar's specific dates to schedule them.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## **Project Structure**
 
-### Advanced Configuration
+Here’s an overview of the project directory structure:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+/src
+  /components
+    Calendar.js        # Main component for the calendar.
+    TaskList.js        # Component for the task list.
+  App.js               # Main app component that renders everything.
+  index.js             # Entry point for the React application.
+  App.css              # Global styling for the app.
+```

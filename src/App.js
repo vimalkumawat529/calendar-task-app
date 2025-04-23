@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import TaskList from "./components/TaskList";
+import Calendar from "./components/Calendar";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
-function App() {
+const initialTasks = [
+  { id: 1, title: "Task-1" },
+  { id: 2, title: "Task-2" },
+  { id: 3, title: "Task-3" },
+  { id: 4, title: "Task-4" },
+  { id: 5, title: "Task-5" },
+];
+
+const App = () => {
+  const [assignedTasks, setAssignedTasks] = useState({});
+
+  const today = new Date().toISOString().split('T')[0];
+
+  const handleDropTask = (date, task) => {
+    setAssignedTasks((prev) => {
+      const existingTasks = prev[date] || [];
+      const taskAlreadyAssigned = existingTasks.some((t) => t.id === task.id);
+      if (!taskAlreadyAssigned) {
+        return {
+          ...prev,
+          [date]: [...existingTasks, task],
+        };
+      }
+      return prev;
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <div className="app">
+        <TaskList tasks={initialTasks} />
+        <Calendar
+          assignedTasks={assignedTasks}
+          onDropTask={handleDropTask}
+          today={today}
+        />
+      </div>
+    </DndProvider>
   );
-}
+};
 
 export default App;
