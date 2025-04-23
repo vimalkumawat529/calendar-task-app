@@ -26,7 +26,7 @@ Follow the steps below to set up the project locally:
 ### **Step 1**: Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/vimalkumawat529/calendar-task-app.git
 cd <project-directory>
 ```
 
