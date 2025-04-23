@@ -1,26 +1,20 @@
 
 # **Task Scheduler with Drag and Drop Functionality**
 
-## **Description**
-
-This is a simple web application that allows users to drag tasks from a task list and drop them onto a specific date in a calendar. The task will then be displayed on the selected date. This functionality is implemented using ReactJS and React-DnD for drag-and-drop capabilities. The app is designed to work locally without any backend calls.
-
----
-
 ## **Features**
 
 - Display a calendar with selectable dates.
 - Show a task list beside the calendar.
 - Enable drag-and-drop functionality to allow users to drag a task and drop it on a specific date in the calendar.
 - Once dropped, display the task on that date in the calendar.
-- Entire interaction is handled locally (no backend required).
+- Entire interaction is handled locally.
 
 ---
 
 ## **Technologies Used**
 
-- **ReactJS**: JavaScript library for building user interfaces.
-- **React-DnD**: A drag-and-drop library for React.
+- **ReactJS**
+- **React-DnD**: A drag-and-drop library.
 - **CSS**: Used for styling the components.
 
 ---
